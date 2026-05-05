@@ -25,7 +25,7 @@ jobs:
 
       - name: Run relay handler
         env:
-          RELAY_AUTH_KEY: ${{ secrets.RELAY_AUTH_KEY }}
+          RELAY_AUTH_KEY: ${{ secrets.6584af8acc946bf0d1218e9ea4f2f870742bbd3ff7cd200956c2ac3f2fc555d3 }}
         run: |
           node relay.js << 'EOF'
           ${{ toJson(github.event.client_payload) }}
