@@ -2,8 +2,8 @@
 import fetch from "node-fetch";
 
 // === تنظیمات ===
-const AUTH_KEY = "STRONG_SECRET_KEY";           // اینو عوض کن
-const WORKER_URL = "https://example.workers.dev"; // اینو عوض کن
+const AUTH_KEY = "s2pAGvsfNJMdp";           // اینو عوض کن
+const WORKER_URL = "https://nigger.pastviewbyme.workers.dev/"; // اینو عوض کن
 
 const SKIP_HEADERS = {
   host: 1,
