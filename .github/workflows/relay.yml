@@ -1,1 +1,28 @@
+name: Relay via Cloudflare Worker
 
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/15 * * * *"   # هر ۱۵ دقیقه یک بار (UTC)
+  workflow_dispatch:          # امکان اجرای دستی از تب Actions
+
+jobs:
+  run-relay:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install node-fetch@2
+
+      - name: Run relay script
+        run: node index.js
